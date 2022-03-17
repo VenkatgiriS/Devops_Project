@@ -33,13 +33,14 @@ Start jenkins status
 0. Stop the jenkins
 1. cd /var/lib/jenkins  
 2. nano config.xml  
-3. // edit the code in the below manner
+3. edit the code in the below manner
+```
 <useSecurity>false</useSecurity>
   <!--<authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
     <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">-->
-
+```
 4. Start the jenkins again and check  
 
 ### 2nd Way  
