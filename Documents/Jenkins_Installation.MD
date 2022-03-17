@@ -18,3 +18,5 @@ Start jenkins status
 
 #### Access Jenkins at  
 ```<host-ip>:8080``` in any browser
+
+#### Go to ``` /var/lib/jenkins/secrets/initialAdminPassword ``` and access the initial password. Enter it and download suggested plugins.
