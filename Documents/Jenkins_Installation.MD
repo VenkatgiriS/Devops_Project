@@ -1,4 +1,4 @@
-1.Create ec2-instance.(Amazon-Linux) 
+1.Create ec2-instance.(Amazon-Linux)  
 Add Jenkins repository from redhat   
 2.sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/ redhat-stable/jenkins.repo  
 
