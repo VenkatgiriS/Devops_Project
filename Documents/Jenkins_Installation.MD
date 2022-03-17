@@ -1,8 +1,8 @@
 1.Create ec2-instance.(Amazon-Linux)  
 Add Jenkins repository from redhat   
-2.sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/ redhat-stable/jenkins.repo  
+2. ```sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/ redhat-stable/jenkins.repo```  
 
-3.sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key  
+3.```sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key```    
 
 4.amazon-linux-extras install epel   
 5.amazon-linux-extras install java-openjdk11  
