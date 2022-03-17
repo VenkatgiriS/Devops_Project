@@ -29,7 +29,7 @@ Start jenkins status
 #### Go to ``` /var/lib/jenkins/secrets/initialAdminPassword ``` and access the initial password. Enter it and download suggested plugins.
 
 # Jenkins Crumb Issue  
-###1st Way(If it doesn't work go for second)  
+### 1st Way(If it doesn't work go for second)  
 0. Stop the jenkins
 1. cd /var/lib/jenkins  
 2. nano config.xml  
@@ -42,7 +42,7 @@ Start jenkins status
 
 4. Start the jenkins again and check  
 
-###2nd Way  
+### 2nd Way  
 curl -v -X GET http://52.91.163.88:8080/crumbIssuer/api/json --user admin:admin
 
 curl -X POST http://52.91.163.88:8080/configureTools/ --user admin:admin -H 'Jenkins-Crumb: fd782d8ae6168ccf4ff775a581eb336d36a2d00a829849011fa24abf7072aa86'
