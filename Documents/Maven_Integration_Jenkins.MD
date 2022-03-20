@@ -31,3 +31,8 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME:$MAVEN_HOME:$M2
    ```
    For maven , 
    ``` /opt/apache-maven ```
+
+   ###Maven Lifecycles
+   Refer the url:https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+   
