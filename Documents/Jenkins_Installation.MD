@@ -29,6 +29,7 @@ Start jenkins status
 #### Go to ``` /var/lib/jenkins/secrets/initialAdminPassword ``` and access the initial password. Enter it and download suggested plugins.
 
 # Jenkins Crumb Issue  
+Important:Make sure to enable proxy for compatibility under crumb issuer.
 ### 1st Way(If it doesn't work go for second)  
 0. Stop the jenkins
 1. cd /var/lib/jenkins  
