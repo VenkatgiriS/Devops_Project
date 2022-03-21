@@ -20,7 +20,7 @@ Edit the context.xml files as shown below(adding comments to code)
   <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String$
 </Context>
 ```
-Now , add users in tomcat under tomcat-users.xml file. Below is the sample users snippet.
+Now , add users in tomcat under tomcat-users.xml file. Below is the sample users snippet.Goto ```/opt/tomcat/conf``` and edit tomcat-users file.
 ```
  <role rolename="manager-gui"/>
  <role rolename="manager-script"/>
@@ -30,3 +30,11 @@ Now , add users in tomcat under tomcat-users.xml file. Below is the sample users
  <user username="deployer" password="deployer" roles="manager-script"/>
  <user username="tomcat" password="s3cret" roles="manager-gui"/>
 ```
+### Setup and integrate tomcat in jenkins
+
+1. Download ```Deploy to container``` plugin under manage jenkins plugins.
+2. Add tomcat manager-script credentials which will allow communication between jenkins and tomcat.
+3. Under job >under post build actions , select ```deploy war/ear in a container``` option.
+4. Give webapp directory or generic directory(**/.war) which will look for .war files in the workspace.
+5. Select tomcat container version
+6. Give the url of tomcat. <http://<host-ip>:8080>
