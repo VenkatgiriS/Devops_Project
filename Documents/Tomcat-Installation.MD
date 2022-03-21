@@ -37,4 +37,4 @@ Now , add users in tomcat under tomcat-users.xml file. Below is the sample users
 3. Under job >under post build actions , select ```deploy war/ear in a container``` option.
 4. Give webapp directory or generic directory(**/.war) which will look for .war files in the workspace.
 5. Select tomcat container version
-6. Give the url of tomcat. <http://<host-ip>:8080>
+6. Give the url of tomcat. <http://host-ip:8080>
