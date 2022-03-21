@@ -38,3 +38,20 @@ Now , add users in tomcat under tomcat-users.xml file. Below is the sample users
 4. Give webapp directory or generic directory(**/.war) which will look for .war files in the workspace.
 5. Select tomcat container version
 6. Give the url of tomcat. <http://host-ip:8080>
+
+#### Configuring tomcat start and stop for easy use by creating link files
+```
+ln -s /opt/apache-tomcat-<version>/bin/startup.sh /usr/local/bin/tomcatup
+ln -s /opt/apache-tomcat-<version>/bin/shutdown.sh /usr/local/bin/tomcatdown
+tomcatup
+tomcatdown
+```
+
+#### Changing port 
+
+1. edit /opt/tomcat/conf/server.xml and check for connector port . 
+2. Restart by stopping and starting again
+3. Change the server details in the job sections also.
+4. Also update the security group of ec2 instance with new port incase if you forget  .
+
+
