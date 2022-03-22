@@ -18,6 +18,6 @@ docker exec -it <cont-id/name> bash
 #### Pulling tomcat image and setting up
 
 1. docker pull tomcat
-2. After docker run command you might face error in accessing the application. 
+2. After docker run command you might face error in accessing the tomcat application. 
 3. login to tomcat container. 
 4. copy the contents of webapp.dist to webapps using ``` cp -R * ../webapps```
