@@ -2,7 +2,7 @@
 ```
 1. yum install docker -y
 2. service docker status
-3. service docker status
+3. service docker start
 ```
 ###Some of the docker commands
 ```
@@ -11,7 +11,11 @@ docker ps
 docker ps -a 
 docker images
 docker rmi
+docker rm $(docker ps -aq)
+docker build -t Imagename:tag .
 docker run -d --name <cont-name> -p (port to run in browser):(port to run the app inside docker) <image-name>
+docker tag 646f58a786c7 venkatgiri/mytomcat:1.1
+docker push venkatgiri/mytomcat:1.1
 docker exec -it <cont-id/name> bash
 
 ```
