@@ -21,6 +21,7 @@ fi
 
 PATH=$PATH:$HOME/bin:$JAVA_HOME:$MAVEN_HOME:$M2
 ```
+Give source .bash_profile
 4. Add java and maven in jenkins under global tool configuration.
    Under JDK Installation add java path. I have added my path.   
    Check the path by using find command. 

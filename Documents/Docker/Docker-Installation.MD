@@ -4,7 +4,7 @@
 2. service docker status
 3. service docker start
 ```
-###Some of the docker commands
+### Some of the docker commands
 ```
 docker pull <image>
 docker ps

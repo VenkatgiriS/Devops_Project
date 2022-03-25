@@ -1,4 +1,4 @@
-1. Create dockeradmin user
+1. Create dockeradmin user in docker server
    ``` 
    useradd dockeradmin 
    passwd dockeradmin
