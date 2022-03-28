@@ -22,3 +22,14 @@ Some of the commands
 ansible all -m ping
 ansible all -a uptime
 ```
+### Integrate Jenkins with Ansible
+1. Under manage jenkins , under ssh servers , add  ansible server.
+2. Give ansibleadmin username with password and ip address. Test connection.
+3. This ansible server dislays under publish over ssh option when you configure the job similar to docker jenkins job.
+
+### After loading the artifacts to the ansible server , install docker and run container in it.
+1. Login root and Install docker ``` yum install docker -y ```
+2. Add ``` ansibleadmin``` user to docker group ```usermod -aG docker ansibleadm```. Check it: ```id ansibleadm ```
+3. Try running docker commands as ansibleadmin user. If having any permission issues , fix it by giving permissions 
+``` sudo chmod  777 /var/run/docker.sock ```. It will work now. 
+4. Try to create docker file and copy the webapp into dockerfile.
