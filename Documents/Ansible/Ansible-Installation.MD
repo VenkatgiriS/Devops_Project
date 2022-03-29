@@ -21,6 +21,7 @@ Some of the commands
 ```
 ansible all -m ping
 ansible all -a uptime
+ansible-playbook webapp.yml --check
 ```
 ### Integrate Jenkins with Ansible
 1. Under manage jenkins , under ssh servers , add  ansible server.
