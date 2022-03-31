@@ -19,6 +19,7 @@ docker push venkatgiri/mytomcat:1.1
 docker exec -it <cont-id/name> bash
 docker container prune(to delete all the stopped containers)
 docker image prune -a (to delete all the unsed images)
+docker login -u venkatgiri -p venkat877
 
 ```
 #### Pulling tomcat image and setting up
