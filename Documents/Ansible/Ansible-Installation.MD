@@ -22,6 +22,8 @@ Some of the commands
 ansible all -m ping
 ansible all -a uptime
 ansible-playbook webapp.yml --check
+ansible-playbook webapp.yml
+ansible-playbook webapp.yml --limit ip-addr
 ```
 ### Integrate Jenkins with Ansible
 1. Under manage jenkins , under ssh servers , add  ansible server.
@@ -34,3 +36,6 @@ ansible-playbook webapp.yml --check
 3. Try running docker commands as ansibleadmin user. If having any permission issues , fix it by giving permissions 
 ``` sudo chmod  777 /var/run/docker.sock ```. It will work now. 
 4. Try to create docker file and copy the webapp into dockerfile.
+
+
+Enter "ansible -m ping 34.207.126.103" when you get 

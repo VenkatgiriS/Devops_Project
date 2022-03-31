@@ -18,7 +18,7 @@ docker tag 646f58a786c7 venkatgiri/mytomcat:1.1
 docker push venkatgiri/mytomcat:1.1
 docker exec -it <cont-id/name> bash
 docker container prune(to delete all the stopped containers)
-docker image prune -a (to delete all the unsed images)
+docker image prune -a (to delete all the unused images)
 docker login -u venkatgiri -p venkat877
 
 ```
@@ -28,3 +28,5 @@ docker login -u venkatgiri -p venkat877
 2. After docker run command you might face error in accessing the tomcat application. 
 3. login to tomcat container. 
 4. copy the contents of webapp.dist to webapps using ``` cp -R * ../webapps```
+
+
