@@ -37,9 +37,12 @@ eksctl create cluster --name cluster-name  \
 --zones <AZ-1>,<AZ-2>
 
 example:
-eksctl create cluster --name k8-cluster2 \
+eksctl create cluster --name k8-Mgmt \
    --region us-east-1 \
---node-type t2.small
+   --node-type t2.small \
+   --nodes-min 2 \
+   --nodes-max 2 \ 
+   --zones us-east-1a , us-east-1b
 
 ```
 5. Delete Cluster:
@@ -55,5 +58,7 @@ kubectl get pod
 kubectl expose deployment demo-nginx --port=80 --type=LoadBalancer
 # kubectl expose deployment regapp --port=8080 --type=LoadBalancer
 kubectl get services -o wide
+kubectl delete pod/nginx-pod
+kubectl describe service/demo-service
 ```
 
