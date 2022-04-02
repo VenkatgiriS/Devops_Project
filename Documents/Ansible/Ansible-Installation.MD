@@ -38,4 +38,12 @@ ansible-playbook webapp.yml --limit ip-addr
 4. Try to create docker file and copy the webapp into dockerfile.
 
 
-Enter "ansible -m ping 34.207.126.103" when you get 
+Enter "ansible -m ping 34.207.126.103" when you get below error
+```
+ECDSA key fingerprint is SHA256:Midh1vnGikrz4AAgI4fYJO7rhyTcDJveRcNYm5etjIc.
+ECDSA key fingerprint is MD5:19:59:a1:73:54:77:5d:d3:2a:91:93:13:28:7e:1d:53.
+Are you sure you want to continue connecting (yes/no)? The authenticity of host '35.174.109.75 (35.174.109.75)' can't be established.
+ECDSA key fingerprint is SHA256:jbUgo4h2Yzl+gdLr+cFfHIjNQ8Y3dFEtH5Ckc5Bve0c.
+ECDSA key fingerprint is MD5:b3:5c:32:ad:90:45:f5:5d:ba:ed:05:8f:ce:a6:3c:58.
+Are you sure you want to continue connecting (yes/no)? yes
+```
