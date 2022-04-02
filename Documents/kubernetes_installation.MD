@@ -1,0 +1,59 @@
+## Kubernetes Setup
+Official AWS documentation:https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
+
+1. Pre-requisites:
+   ```Setup aws ec2-instance (serves as management server)
+   Install AWSCLI latest version(https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+   check: aws --version
+   ```
+2. Download kubectl and setup kubectl
+   ```
+    curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl
+    chmod +x ./kubectl
+    mv ./kubectl /usr/local/bin 
+    kubectl version --short --client
+    ```
+3. Download eksctl and setup
+    ```
+    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+    sudo mv /tmp/eksctl /usr/local/bin
+    eksctl version
+    ```
+4. Create IAM role and attach it to ec2-instance . This is responsible in permitting the k8's management server for setting up the cluster.
+  a.Open IAM page.  
+  b.Select roles on the left menu.Click on create role.
+  c.Select 'aws service' and ec2 under user case and click next.  
+  d.Search and select fullaccesses of 'iam', 'cloudformation' , 'ec2' and give this role name in the next page.  
+  e. Go to ec2-instance page and select actions of management server. Select the modify IAMrole under security. Select the role which you have created and attach it to Mgmt-server.
+  ##### If you get any errors like access denied , give full administration access to iam role.
+
+### Cluster Creation
+```
+eksctl create cluster --name cluster-name  \
+--region region-name \
+--node-type instance-type \
+--nodes-min 2 \
+--nodes-max 2 \ 
+--zones <AZ-1>,<AZ-2>
+
+example:
+eksctl create cluster --name k8-cluster2 \
+   --region us-east-1 \
+--node-type t2.small
+
+```
+5. Delete Cluster:
+   eksctl delete cluster k8-cluster2 --region us-east-1
+Other Usefull Commands
+```
+kubectl get nodes
+kubectl run tomcat --image=tomcat 
+kubectl create deployment  demo-nginx --image=nginx --replicas=2 --port=80
+# kubectl deployment regapp --image=valaxy/regapp --replicas=2 --port=8080
+kubectl get all
+kubectl get pod
+kubectl expose deployment demo-nginx --port=80 --type=LoadBalancer
+# kubectl expose deployment regapp --port=8080 --type=LoadBalancer
+kubectl get services -o wide
+```
+
