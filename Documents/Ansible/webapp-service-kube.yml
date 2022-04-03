@@ -1,0 +1,7 @@
+---
+- hosts: k8s
+#  become: yes
+  user: root
+  tasks:
+  - name: kubernetes service
+    command: kubectl apply -f webapp-service.yml
