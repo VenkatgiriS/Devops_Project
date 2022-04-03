@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: docker start
+    command: service docker start 

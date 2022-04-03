@@ -1,0 +1,5 @@
+---
+- hosts: docker
+  tasks:
+  - name: run container out of docker image
+    command: docker run -d --name newapp -p 8082:8080 venkatgiri/devops-project:v4

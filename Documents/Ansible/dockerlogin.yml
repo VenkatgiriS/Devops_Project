@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+  - name: docker login
+    command: docker login -u venkatgiri -p venkat877
