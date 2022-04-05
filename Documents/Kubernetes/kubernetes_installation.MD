@@ -46,7 +46,7 @@ eksctl create cluster --name k8-Mgmt \
 
 ```
 5. Delete Cluster:
-   eksctl delete cluster k8-cluster2 --region us-east-1
+   eksctl delete cluster k8s-Mgmt --region us-east-1
 Other Usefull Commands
 ```
 kubectl get nodes

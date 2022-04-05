@@ -1,0 +1,23 @@
+Started by user unknown or anonymous
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Pull_Build_Deploy-on-ansible
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Pull_Build_Deploy-on-ansible/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/VenkatgiriS/hello-world-1.git # timeout=10
+Fetching upstream changes from https://github.com/VenkatgiriS/hello-world-1.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.32.0'
+ > git fetch --tags --force --progress -- https://github.com/VenkatgiriS/hello-world-1.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 763b66c8b04af14bff2e7873642390d35f0b1b48 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 763b66c8b04af14bff2e7873642390d35f0b1b48 # timeout=10
+Commit message: "added"
+ > git rev-list --no-walk 763b66c8b04af14bff2e7873642390d35f0b1b48 # timeout=10
+[Pull_Build_Deploy-on-ansible] $ /bin/sh -xe /tmp/jenkins5228749921686338856.sh
++ sshpass -p venkat123 ssh -t -t -R ansibleadm@35.174.109.75
+Bad remote forwarding specification 'ansibleadm@35.174.109.75'
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

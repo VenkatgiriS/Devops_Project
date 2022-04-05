@@ -1,0 +1,22 @@
+Started by user unknown or anonymous
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/sample_job
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/VenkatgiriS/hello-world-1.git
+ > git init /var/lib/jenkins/workspace/sample_job # timeout=10
+Fetching upstream changes from https://github.com/VenkatgiriS/hello-world-1.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.32.0'
+ > git fetch --tags --force --progress -- https://github.com/VenkatgiriS/hello-world-1.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/VenkatgiriS/hello-world-1.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 2ed39a6aa4a4678981cbb1893e7a1fd4bd89ded5 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2ed39a6aa4a4678981cbb1893e7a1fd4bd89ded5 # timeout=10
+Commit message: "added regapp deployment and service files"
+First time build. Skipping changelog.
+Finished: SUCCESS
