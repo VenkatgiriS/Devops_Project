@@ -6,7 +6,7 @@ metadata:
      app: regapp
 
 spec:
-  replicas: 2 
+  replicas: 3
   selector:
     matchLabels:
       app: regapp
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: regapp
-        image: venkatgiri/devops-project:v4
+        image: venkatgiri/newapp:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
