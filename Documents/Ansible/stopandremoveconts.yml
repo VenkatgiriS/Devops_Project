@@ -1,0 +1,9 @@
+---
+- hosts: docker
+  tasks:
+  - name: stop running containers
+    command: docker stop newapp
+  - name: remove stopped containers
+    command: docker rm newapp
+  - name: remove images
+    command: docker rmi venkatgiri/devops-project:v4

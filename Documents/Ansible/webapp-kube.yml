@@ -5,3 +5,5 @@
   tasks:
   - name: kubernetes deployment
     command: kubectl apply -f webapp.yml
+  - name: kubernetes update roll out strategy
+    command: kubectl rollout restart deployment.apps/valaxy-regapp
