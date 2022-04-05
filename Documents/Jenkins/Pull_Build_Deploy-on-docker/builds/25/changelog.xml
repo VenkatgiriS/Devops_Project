@@ -1,0 +1,10 @@
+commit 84a4b40dbc04de32495b3dadbb9a8bcf4c594c35
+tree 91ba9261e42d50d577d2ba3e0a0b82096ccb504c
+parent 6d4998743c636f606f9eb02bff7e7936df37447a
+author VenkatgiriS <venkatgiri877@gmail.com> 2022-03-31 20:37:14 +0530
+committer VenkatgiriS <venkatgiri877@gmail.com> 2022-03-31 20:37:14 +0530
+
+    added a word
+
+
+:100644 100644 c102adcd9e737db250b238b267d6d0439f648027 ebddd6780719bb5e0073bbcafd544784a78d1f3f M	webapp/src/main/webapp/index.jsp

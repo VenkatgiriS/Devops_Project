@@ -1,0 +1,12 @@
+Started on Mar 24, 2022, 2:24:00 PM
+Using strategy: Default
+[poll] Last Built Revision: Revision 6f0867e15451cf4a4f4bf2ba54f7554bc1277014 (refs/remotes/origin/master)
+The recommended git tool is: NONE
+No credentials specified
+ > git --version # timeout=10
+ > git --version # 'git version 2.32.0'
+ > git ls-remote -h -- https://github.com/VenkatgiriS/hello-world-1.git # timeout=10
+Found 4 remote heads on https://github.com/VenkatgiriS/hello-world-1.git
+[poll] Latest remote head revision on refs/heads/master is: ca1b725ae05f1de9b1c10b99c55e488e0ecaef71
+Done. Took 0.15 sec
+Changes found

@@ -1,0 +1,35 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1174.vdcb_d054cf74a_">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2683.vd0a_8f6a_1c263">
+    <script>node {
+    stage(&apos;Init&apos;) {
+       echo (&quot;Initializing...&quot;)
+    }
+    def dates = input (
+        id: &apos;dates&apos;, 
+        message: &quot;When to run?&quot;, 
+        parameters: [
+            [
+                $class: &apos;DatePickerDefinition&apos;, 
+                name: &apos;Start Date Time&apos;, 
+                description: &apos;Date to start&apos;, 
+                type: &apos;DATE_TIME&apos;, 
+                defaultValue: &quot;LocalDate.now()&quot;
+            ]
+        ]
+    )
+    echo (&quot;Date to Start: &quot; + dates[&apos;Start Date Time&apos;])
+    
+    stage(&apos;Init&apos;) {
+       echo (&quot;Hello-World...&quot;)
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

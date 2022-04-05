@@ -1,0 +1,96 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1174.vdcb_d054cf74a_">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@564.ve62a_4eb_b_e039">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.InputAction plugin="pipeline-input-step@446.vf27b_0b_83500e">
+      <ids class="java.util.concurrent.CopyOnWriteArrayList"/>
+    </org.jenkinsci.plugins.workflow.support.steps.input.InputAction>
+    <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@1087.v16065d268466">
+      <boundCredentials class="concurrent-hash-map"/>
+    </com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder>
+  </actions>
+  <queueId>65</queueId>
+  <timestamp>1648634213794</timestamp>
+  <startTime>1648634213804</startTime>
+  <result>SUCCESS</result>
+  <duration>84224</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>node {
+    stage(&apos;Init&apos;) {
+       echo (&quot;Initializing...&quot;)
+    }
+    def dates = input (
+        id: &apos;dates&apos;, 
+        message: &quot;When to run?&quot;, 
+        parameters: [
+            [
+                $class: &apos;DatePickerDefinition&apos;, 
+                name: &apos;Start Date Time&apos;, 
+                description: &apos;Date to start&apos;, 
+                type: &apos;DATE_TIME&apos;, 
+                defaultValue: &apos;2019-08-08T15:30&apos;
+            ],[
+                $class: &apos;DatePickerDefinition&apos;, 
+                name: &apos;End Date&apos;, 
+                description: &apos;Date to end&apos;, 
+                type: &apos;DATE&apos;, 
+                defaultValue: &apos;2019-08-10&apos;
+            ],[
+                $class: &apos;DatePickerDefinition&apos;, 
+                name: &apos;End Time&apos;, 
+                description: &apos;Time to end&apos;, 
+                type: &apos;TIME&apos;, 
+                defaultValue: &apos;09:15&apos;
+            ]
+        ]
+    )
+    echo (&quot;Date to Start: &quot; + dates[&apos;Start Date Time&apos;])
+    echo (&quot;Date to End: &quot; + dates[&apos;End Date&apos;])
+    echo (&quot;Time to End: &quot; + dates[&apos;End Time&apos;])
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>178145642</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>248400352</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>1034645952</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>170197389</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>473532989</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>16</iota>
+    <head>1:16</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

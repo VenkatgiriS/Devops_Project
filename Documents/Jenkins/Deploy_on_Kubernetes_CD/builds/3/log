@@ -1,0 +1,12 @@
+Started by upstream project "[8mha:////4K21hwzuoYJb03PCw3AaA/6AzQbFPTTAAtJL2mHf+Ss3AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAypEgYF/az8JH2n0syclPjEvJT44JL8otT4/Lx4x7zizKScVH0AwZQMaNUAAAA=[0mBuild_and_Store_on_Ansible" build number [8mha:////4LFwS3CAAKREzpBiRuUWUFgcgM2WEXyezAzRCWlS6qtaAAAArh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYl/az8JH2n0syclPjEvJT44JL8otT4/Lx4x7zizKScVH1DIwC5vU4s1wAAAA==[0m12
+originally caused by:
+ Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy_on_Kubernetes_CD
+SSH: Connecting from host [jenkins-server]
+SSH: Connecting with configuration [ansible-server] ...
+SSH: EXEC: completed after 8,211 ms
+SSH: Disconnecting configuration [ansible-server] ...
+SSH: Transferred 0 file(s)
+Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
+Finished: SUCCESS

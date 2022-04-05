@@ -1,0 +1,10 @@
+Started by user unknown or anonymous
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy_on_Kubernetes
+SSH: Connecting from host [jenkins-server]
+SSH: Connecting with configuration [ansible-server] ...
+SSH: EXEC: completed after 8,206 ms
+SSH: Disconnecting configuration [ansible-server] ...
+SSH: Transferred 0 file(s)
+Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
+Finished: SUCCESS
