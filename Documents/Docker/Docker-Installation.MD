@@ -14,6 +14,8 @@ docker rmi
 docker rm $(docker ps -aq)
 docker build -t Imagename:tag <filepath>
 docker run -d --name <cont-name> -p (port to run in browser):(port to run the app inside docker) <image-name>
+docker stop <cont-id>
+docker start <cont-id>
 docker tag 646f58a786c7 venkatgiri/mytomcat:1.1
 docker push venkatgiri/mytomcat:1.1
 docker exec -it <cont-id/name> bash

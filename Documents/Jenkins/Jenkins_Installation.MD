@@ -21,6 +21,8 @@ Check Jenkins status
 Start jenkins status  
 9.```systemctl start jenkins```  
     
+Login to Jenkins User
+```sudo su -s /bin/bash jenkins```
 #### Access Jenkins at  
 ```<host-ip>:8080``` in any browser
 
