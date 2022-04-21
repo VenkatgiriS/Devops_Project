@@ -1,7 +1,7 @@
 1.Create ec2-instance.(Amazon-Linux)  
 
 Add Jenkins repository from redhat   
-2. ```sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/ redhat-stable/jenkins.repo```  
+2. ```sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo```  
 
 3.```sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key```    
 
@@ -20,9 +20,7 @@ Check Jenkins status
 
 Start jenkins status  
 9.```systemctl start jenkins```  
-
-10.```systemctl status jenkins```    
-
+    
 #### Access Jenkins at  
 ```<host-ip>:8080``` in any browser
 

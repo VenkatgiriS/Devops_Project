@@ -6,12 +6,12 @@
 wget <maven_url(usually on homepage of maven website)> 
 tar -xvzf <apache-maven-*>
 ```    
-3. Setup Environment variables. Open ``` .bash_profile  ``` under root user. Add maven path and java path.Added below for your reference.
+3. Setup Environment variables. Open ```nano ~/.bash_profile  ``` under root user. Add maven path and java path.Added below for your reference.
 ```
 # .bash_profile
 JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.13.0.8-1.amzn2.0.3.x86_64
-MAVEN_HOME=/opt/apache-maven
-M2=/opt/apache-maven/bin
+MAVEN_HOME=/opt/maven
+M2=/opt/maven/bin
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
@@ -35,5 +35,7 @@ Give source .bash_profile
 
    ###Maven Lifecycles
    Refer the url:https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+5. Check Maven Version "mvn -version"
 
    
