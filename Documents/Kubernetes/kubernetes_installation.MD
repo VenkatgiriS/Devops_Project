@@ -45,6 +45,8 @@ eksctl create cluster --name k8-Mgmt \
    --zones us-east-1a , us-east-1b
 
 ```
+To see the logs or issues check
+```eksctl utils describe-stacks --region=us-east-1 --cluster=k8-Mgmt```
 5. Delete Cluster:
    eksctl delete cluster k8-Mgmt --region us-east-1
 Other Usefull Commands
@@ -60,5 +62,7 @@ kubectl expose deployment demo-nginx --port=80 --type=LoadBalancer
 kubectl get services -o wide
 kubectl delete pod/nginx-pod
 kubectl describe service/demo-service
+kubectl apply -f veritoPod.yml
+kubectl cluster-info
 ```
 

@@ -1,14 +1,14 @@
 # Ansible Installation
 1. Prerequisites: Python to be installed.Check:```python --version```.If Not installed execute the command ``` yum install python```
 2. Check if pip is installed.Check : ``` pip -V ```. If not installed , execute ``` yum install pip ```.
-3. Install Ansible.```pip install ansible```.Check: ```ansible -version```
+3. Install Ansible.```pip install ansible```.Check: ```ansible --version```
 
 ### Integration with docker server
 1. Create a user in ansible server and docker server ``` useradd ansibleadmin ``` and give password.
 2. open and edit the visudo file and give ansibleadmin sudo permissions by editing the file as mentioned below in both the servers.
 ```
 root    ALL=(ALL)       ALL
-ansibleadm   ALL=(ALL)       NOPASSWD: ALL
+ansibleadmin   ALL=(ALL)       NOPASSWD: ALL
 ```
 3. Enable password less authentication. Login to the ansible server with ```ansbileadmin``` user and give password from outside. You should be able to login.
 4. On the ```ansibleadmin``` home directory , create ssh keys ```ssh-keygen``` and copy the public key ``` ssh-copy-id <private-ip> ```
@@ -26,7 +26,7 @@ ansible-playbook webapp.yml
 ansible-playbook webapp.yml --limit ip-addr
 ```
 ### Integrate Jenkins with Ansible
-1. Under manage jenkins , under ssh servers , add  ansible server.
+1. Under manage jenkins , go to configure system .under ssh servers , add  ansible server.
 2. Give ansibleadmin username with password and ip address. Test connection.
 3. This ansible server dislays under publish over ssh option when you configure the job similar to docker jenkins job.
 
