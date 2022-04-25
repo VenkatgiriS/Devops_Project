@@ -37,7 +37,7 @@ eksctl create cluster --name cluster-name  \
 --zones <AZ-1>,<AZ-2>
 
 example:
-eksctl create cluster --name k8-Mgmt \
+eksctl create cluster --name kubernetes-Mgmt \
    --region us-east-1 \
    --node-type t2.small \
    --nodes-min 2 \
@@ -48,7 +48,7 @@ eksctl create cluster --name k8-Mgmt \
 To see the logs or issues check
 ```eksctl utils describe-stacks --region=us-east-1 --cluster=k8-Mgmt```
 5. Delete Cluster:
-   eksctl delete cluster k8-Mgmt --region us-east-1
+   eksctl delete cluster kubernetes-Mgmt --region us-east-1
 Other Usefull Commands
 ```
 kubectl get nodes
