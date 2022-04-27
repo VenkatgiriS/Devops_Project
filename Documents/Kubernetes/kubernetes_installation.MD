@@ -48,7 +48,7 @@ eksctl create cluster --name kubernetes-Mgmt \
 To see the logs or issues check
 ```eksctl utils describe-stacks --region=us-east-1 --cluster=k8-Mgmt```
 5. Delete Cluster:
-   eksctl delete cluster kubernetes-Mgmt --region us-east-1
+   eksctl delete cluster Mgmt-Server --region us-east-1
 Other Usefull Commands
 ```
 kubectl get nodes
