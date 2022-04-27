@@ -31,4 +31,8 @@ docker login -u venkatgiri -p venkat877
 3. login to tomcat container. 
 4. copy the contents of webapp.dist to webapps using ``` cp -R * ../webapps```
 
+### Error
+
+sudo chmod  777 /var/run/docker.sock
+
 
