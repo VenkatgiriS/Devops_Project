@@ -22,7 +22,10 @@ docker exec -it <cont-id/name> bash
 docker container prune(to delete all the stopped containers)
 docker image prune -a (to delete all the unused images)
 docker login -u venkatgiri -p venkat877
-
+docker scan <imageName>
+docker scan --file Dockerfile docker-scan:e2e
+docker volume create my-vol
+docker volume rm myvol2
 ```
 #### Pulling tomcat image and setting up
 
