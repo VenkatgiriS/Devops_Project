@@ -26,6 +26,8 @@ docker scan <imageName>
 docker scan --file Dockerfile docker-scan:e2e
 docker volume create my-vol
 docker volume rm myvol2
+docker system prune
+docker system prune -a --volumes
 ```
 #### Pulling tomcat image and setting up
 
