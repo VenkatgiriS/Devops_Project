@@ -1,0 +1,79 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(defaultValue: 'us-west-2', description: 'Provide your region', name: 'REGION')
+    }
+
+
+    stages {
+        stage('declarative'){
+            steps {
+                print params.REGION
+                 sh "echo ${params.REGION}"
+            }
+        }
+
+        stage('scripted'){
+            steps {
+                script {
+                    print params.REGION
+                }
+            }
+        }
+    }
+}
+
+
+===================================
+---
+- hosts: ansible
+  tasks:
+  - name: Stop Ec2.
+    command: aws ec2 stop-instances --instance-ids i-09f5960306367b7a3
+  - pause:
+      seconds: 60
+  - name: Change EC2-type.
+    shell: >
+          aws ec2 modify-instance-attribute --instance-id i-09f5960306367b7a3 --instance-type "{\"Value\": \"t2.micro\"}"
+  - name: Start EC2-type.
+    command: aws ec2 start-instances --instance-ids i-09f5960306367b7a3
+    
+
+---
+- hosts: ec2-server
+  tasks:
+  - name: Change instance type.
+    block:
+      - name: Stop EC2 instance.
+        ec2:
+          region: "{{ us-east-1 }}"
+          instance_ids:
+            - "{{ i-09f5960306367b7a3 }}"
+          state: stopped
+          wait: yes
+        when: ec2_state == "running"
+
+aws ec2 modify-instance-attribute --instance-id "{{ i-09f5960306367b7a3 }}" --instance-type "{{ t2.small }}" --region "{{ us-east-1c }}"
+aws ec2 modify-instance-attribute --instance-id "{{ i-09f5960306367b7a3 }}" --instance-type "{{ t2.small }}"
+
+aws ec2 modify-instance-attribute --instance-id i-09f5960306367b7a3 --instance-type '{{"Value": "t2.small"}}'
+aws ec2 stop-instances --instance-ids i-09f5960306367b7a3
+aws ec2 start-instances --instance-ids i-09f5960306367b7a3
+
+
+===================================
+---
+- hosts: ansible
+  tasks:
+  - name: Change instance type.
+    block:
+      - name: Stop EC2 instance.
+        ec2:
+          region: "{{ us-east-1c }}"
+          instance_ids:
+            - "{{ i-09f5960306367b7a3 }}"
+          state: stopped
+          wait: yes
+        delegate_to: 18.0.3.174
+        when: ec2_state == "running"

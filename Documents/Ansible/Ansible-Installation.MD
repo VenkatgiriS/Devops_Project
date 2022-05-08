@@ -4,7 +4,7 @@
 3. Install Ansible.```pip install ansible```.Check: ```ansible --version```
 
 ### Integration with docker server
-1. Create a user in ansible server and docker server ``` useradd ansibleadmin ``` and give password.
+1. Create a user in ansible server and docker server ```useradd ansibleadmin``` and give password.
 2. open and edit the visudo file and give ansibleadmin sudo permissions by editing the file as mentioned below in both the servers.
 ```
 root    ALL=(ALL)       ALL
