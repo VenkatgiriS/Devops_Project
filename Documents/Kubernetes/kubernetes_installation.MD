@@ -64,6 +64,7 @@ kubectl delete pod/nginx-pod
 kubectl describe service/demo-service
 kubectl apply -f veritoPod.yml
 kubectl cluster-info
+kubectl delete cluster kubernetes-Mgmt
 ```
 ##### Incase if facing any issue like ``` The connection to the server localhost:8080 was refused - did you specify the right host or port?``` or ```kubectl command not found ``` issues then change the ownership and copy the .kube file to the user who is running kubernetes commands and restart the server.
 
