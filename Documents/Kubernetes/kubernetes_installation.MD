@@ -2,6 +2,11 @@
 Official AWS documentation:https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
 
 1. Pre-requisites:
+    ```    
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
+    ```
    ```Setup aws ec2-instance (serves as management server)
    Install AWSCLI latest version(https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
    check: aws --version
