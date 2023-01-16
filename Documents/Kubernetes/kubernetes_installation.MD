@@ -8,7 +8,7 @@ Official AWS documentation:https://docs.aws.amazon.com/eks/latest/userguide/gett
    ```
 2. Download kubectl and setup kubectl
    ```
-    curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl
+    curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.7/2022-10-31/bin/linux/amd64/kubectl
     chmod +x ./kubectl
     mv ./kubectl /usr/local/bin 
     kubectl version --short --client
