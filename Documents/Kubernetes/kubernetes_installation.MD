@@ -37,13 +37,7 @@ eksctl create cluster --name cluster-name  \
 --zones <AZ-1>,<AZ-2>
 
 example:
-eksctl create cluster --name kubernetes-Mgmt \
-   --region us-east-1 \
-   --node-type t2.small \
-   --nodes-min 2 \
-   --nodes-max 2 \ 
-   --zones us-east-1a , us-east-1b
-
+eksctl create cluster --name kubernetes-Mgmt --region us-east-1 --node-type t2.small --nodes-min 2 --nodes-max 2  --zones us-east-1a,us-east-1b 
 ```
 To see the logs or issues check
 ```eksctl utils describe-stacks --region=us-east-1 --cluster=k8-Mgmt```
