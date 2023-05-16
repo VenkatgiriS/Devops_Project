@@ -1,2 +1,2 @@
 # Devops_Project
-Git,Jenkins,maven,ansible,docker,kubernetes,Terraform,AWS
+Git,Jenkins,maven,ansible,docker,kubernetes,Terraform,AWS,Shell
