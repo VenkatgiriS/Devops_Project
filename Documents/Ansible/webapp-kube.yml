@@ -1,6 +1,5 @@
 ---
 - hosts: k8s
-#  become: yes
   user: root
   tasks:
   - name: kubernetes deployment
