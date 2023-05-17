@@ -1,9 +1,0 @@
-commit 7e960e57e2c941a92ecb0678f10fe52ac89553e2
-tree 0c647597d9c6e6052e8c94ce0b32656cb1e85f64
-parent ff5262e9b5645a784931ce982661128a94f82d5d
-author VenkatgiriS <56349307+VenkatgiriS@users.noreply.github.com> 2022-03-21 23:19:18 +0530
-committer GitHub <noreply@github.com> 2022-03-21 23:19:18 +0530
-
-    Update index.jsp
-
-:100644 100644 41c685ad7858ce50ecfc68d5623295237244b419 2d26c47b150f47a3d5f4e12240742e5c1d534ec9 M	webapp/src/main/webapp/index.jsp
